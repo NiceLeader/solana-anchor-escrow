@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "types": ["mocha", "chai"],
+    "typeRoots": ["./node_modules/@types"],
+    "lib": ["es2015"],
+    "module": "commonjs",
+    "target": "es6",
+    "esModuleInterop": true,
+    "baseUrl": ".",  // dodane
+    "paths": {  // dodane
+      "*": ["*", "target/types/*"]
+    },
+    "outDir": "build"  // dodane, opcjonalnie
+  },
+  "include": [  // dodane
+    "tests/**/*.ts",
+    "target/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]  // dodane, opcjonalnie
+}
